@@ -1,4 +1,10 @@
+class Schedule{
+    private:
+        int m_numberOfItems; // currentNumber of boats
+        
+    public:
 
+};
 class Operator{
     private: 
         bool m_isBusy;
@@ -12,10 +18,3 @@ class Operator{
         void EditSchedule();
 };
 
-class Schedule{
-    private:
-        int m_numberOfItems; // currentNumber of boats
-        
-    public:
-
-};
