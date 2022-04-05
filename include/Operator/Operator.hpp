@@ -8,7 +8,7 @@ class Schedule{
 class Operator{
     private: 
         bool m_isBusy;
-        Schedule m_schedule;
+        Schedule * m_schedule;
     
     public:
         Operator();
