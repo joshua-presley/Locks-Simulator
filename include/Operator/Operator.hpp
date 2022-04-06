@@ -41,6 +41,23 @@ class LinkedList{
                 }
             }
         }
+
+        L get(int index){
+            if(index == 0){
+                return this->head->data;
+            }
+            else{
+                node<L>* curr = this->head;
+                for(int i = 0; i<index; ++i){
+                    curr = curr->next;
+                }
+                return curr->data;
+            }
+        }
+
+        L operator[] (int index){
+            return get(index);
+        }
 };
 //endregion List area
 
