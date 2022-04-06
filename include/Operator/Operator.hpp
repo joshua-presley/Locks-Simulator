@@ -23,6 +23,23 @@ class LinkedList{
                 head->next = NULL;
                 last = head;
             }
+            else{
+                if(last == head){
+                    //one element
+                    last = new node<L>;
+                    last->data = data;
+                    last->next = NULL;
+                    head->next = last;
+                }
+                else{
+                    //more than one element
+                    node<L>* insdata = new node<L>;
+                    insdata->data = data;
+                    insdata->next = NULL;
+                    last->next = insdata;
+                    last = insdata;
+                }
+            }
         }
 };
 //endregion List area
