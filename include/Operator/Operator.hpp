@@ -74,9 +74,7 @@ class ScheduleItem{
             m_arrivalHour = arrivalHour;
             m_arrivalMinute = arrivalMinute;
         }
-        ScheduleItem(){
-            
-        }
+        ScheduleItem() = default;
         //turn the hour values into one int for ease of comparison
         int GetArrivalTime(){
             return (m_arrivalHour * 100) + m_arrivalMinute;
