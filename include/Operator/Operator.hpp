@@ -1,3 +1,6 @@
+#include<iostream>
+
+
 //region List area
 template<class L>
 struct node{
@@ -66,12 +69,13 @@ class ScheduleItem{
     private:
         int m_arrivalHour;
         int m_arrivalMinute;
-        ScheduleItem * nextItem;
-        ScheduleItem * previousItem;
     public:
         ScheduleItem(int arrivalHour, int arrivalMinute){
             m_arrivalHour = arrivalHour;
             m_arrivalMinute = arrivalMinute;
+        }
+        ScheduleItem(){
+            
         }
         //turn the hour values into one int for ease of comparison
         int GetArrivalTime(){
@@ -82,13 +86,13 @@ class ScheduleItem{
 class Operator{
     private: 
         bool m_isBusy;
-        ScheduleItem * m_schedule;
+        LinkedList<ScheduleItem> * m_schedule;
     
     public:
         Operator();
         void OpenLock();
         void CloseLock();
         void MoveLock(int Direction);
-        void EditSchedule();
+        void AddToSchedule(ScheduleItem newItem);
 };
 

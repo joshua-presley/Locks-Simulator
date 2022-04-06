@@ -3,10 +3,9 @@
 //region Operator
 Operator::Operator(){
     m_isBusy = false;
-    m_schedule = new Schedule();
+    m_schedule = new LinkedList<ScheduleItem>;
 }
-
-int main(void){
-    Operator * o = new Operator();
+void Operator::AddToSchedule(ScheduleItem newItem){
+    this->m_schedule->add(newItem);
 }
 //endregion Operator
