@@ -7,12 +7,13 @@ struct node{
     node<L>* next;
     L data;
 };
+
 template<class L>
 class LinkedList{
     public:
         node<L>* head;
         node<L>* last;
-        
+
         LinkedList<L>();
         void add(L data);
         L get(int index);
